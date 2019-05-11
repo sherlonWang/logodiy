@@ -1,0 +1,252 @@
+body{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+*{
+    color: white;
+}
+#capture_h,#capture_v{
+    text-align: center;
+    /*border: 1px solid red;*/
+    background-color: rgba(0, 0, 0, 0);
+    width:auto;
+    display:inline-block;
+    padding: 20px;
+}
+#capture_v{
+    display: none;
+}
+.prefix,.suffix{
+    font-weight: bold;
+    font-family: Helvetica;
+    font-size: 50px;
+}
+.prefix{
+    color: #08131c;
+    padding: 5px;
+    background: #ffc42d;  /* fallback for old browsers */
+    border-radius: 10px;
+}
+.suffix{
+    color: white;
+    padding: 5px;
+    background-color: red;
+    border-radius: 10px;
+}
+.show{
+    font-size: 25px;
+    font-weight: bold;
+}
+#suffix-show,#prefix-show{
+    color: #3095ff;
+}
+#edit{
+    /*position: relative;*/
+    /*float: left;*/
+    /*margin-top: 200px;*/
+    /*margin-left:250px;*/
+    height: 300px;
+    text-align: center;
+}
+#config{
+    /*position: relative;*/
+    /*float: right;*/
+    /*margin-right: 300px;*/
+    /*margin-top: 20px;*/
+    zoom: 0.8;
+    text-align: center;
+}
+.title{
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+}
+.subtitle{
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+}
+#align{
+    display: none;
+    width: 60px;
+    height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    background-color: #3095ff;
+    cursor: pointer;
+}
+#align:hover{
+    background-color: #2578ce;
+}
+#download{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    background: #667db6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    outline: none;/*去掉按钮点击后的边框*/
+}
+#download:hover{
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+fieldset{
+    border-radius: 20px;
+    border-color: #4d504d;
+    margin-bottom: 10px;
+}
+legend{
+    font-size: 20px;
+}
+
+.switch-container{
+    height: 25px;
+    width: 80px;
+    border: 2px solid #c3b8b8;
+    border-radius: 25px;
+    display: inline-block;
+    overflow: hidden
+}
+.switch-container input{
+    display: none
+}
+.switch-container label{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(180, 180, 180, 0.5);
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all .4s ease;
+}
+.switch-container label:before{
+    content:'';
+    display: block;
+    border-radius: 25px;
+    height: 21px;
+    width: 21px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
+    transition: all .4s ease;
+    background-color: #fff;
+    position: relative;
+    right: -2px;
+    top: 2px;
+}
+
+.switch-container input:checked~label:before{
+    right: -57px;
+    background-color: #fff;
+}
+
+.switch-container input:checked~label{
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+
+}
+.item{
+    margin-left: 20%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.color{
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button{
+    background-color: #949494;  /* fallback for old browsers */
+    border: none;
+    cursor: pointer;
+    /*width: 50px;*/
+    height: 25px;
+    border-radius:10px;
+    outline: none;
+}
+.i{
+    font-style: italic;
+}
+.u{
+    text-decoration: underline;
+}
+.d{
+    text-decoration: line-through;
+}
+
+.a-radio{
+    display: none;
+}
+.b-radio,.c-radio,.d-radio{
+    display: inline-block;
+    border:1px solid #ccc;
+    width:16px;
+    height: 16px;
+    v-align: middle;
+    margin-right: 5px;
+    position: relative;
+}
+.b-radio{
+    border-radius:2px;
+}
+.c-radio{
+    border-radius:8px;
+}
+.d-radio{
+    border-radius:4px;
+}
+.b-radio:before,.c-radio:before,.d-radio:before{
+    content: '';
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background: rgb(62, 175, 250);
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left: -5px;
+    margin-top: -5px;
+    display: none;
+}
+.b-radio:before{
+    border-radius: 2px;
+}
+.c-radio:before{
+    border-radius: 5px;
+}
+.d-radio:before{
+    border-radius: 3px;
+}
+.a-radio:checked~.b-radio:before{
+    display: block;
+}
+.a-radio:checked~.c-radio:before{
+    display: block;
+}
+.a-radio:checked~.d-radio:before{
+    display: block;
+}
+label{
+    cursor: pointer;
+}
+label input{
+    margin-left: 20px;
+}
+.radio{
+    margin: 10px;
+}

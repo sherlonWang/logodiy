@@ -1,0 +1,151 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta name="layout" content="main">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>简易logo制作</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png"/>
+    <link rel="stylesheet" href="css/slider.css" type="text/css">
+    <link rel="stylesheet" href="css/logodiy.css" type="text/css">
+</head>
+<script>
+//    function fn1(){
+//        $(".prefix").css('background','linear-gradient(to right, #E100FF, #7F00FF)');
+//    }
+</script>
+<body style="zoom: 1">
+<div>
+    <div id="edit">
+        <div title="修改我" id="capture_h">
+            <span contenteditable="true" class="prefix">Edit</span>
+            <span contenteditable="true" class="suffix">Me</span>
+        </div>
+        <div title="修改我" id="capture_v">
+            <span contenteditable="true" class="prefix">Edit</span><br>
+            <span contenteditable="true" class="suffix">Me</span>
+        </div>
+    </div>
+    <div id="config">
+        <!--<input id="" class="button" onclick="fn1();" type="button" value="渐变"/>-->
+        <!-- 下载 -->
+        <input style="width: 200px;height: 50px" title="下载" id="download" class="button" onclick="download();" type="button" value="↓ Download"/>
+        <br><br>
+        <fieldset>
+            <legend title="布局">Layout</legend>
+            <div title="Click me" class="switch-container">
+                <input onclick="changeAlign(this);" type="checkbox" id="user-switch">
+                <label for="user-switch"></label>
+            </div>
+            <input id="align" class="button" type="button" value="h"/>
+        </fieldset>
+        <fieldset>
+            <legend title="文字">Text</legend>
+            <div class="item">
+                <span title="大小" class="title">Font：</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>
+                    <span title="前缀" class="subtitle">Prefix：</span>
+                    <input id="prefix-font" title="前缀文字大小" value="50" min="30" max="100" type="range" >
+                    <span class="show" id="prefix-show">50</span><span style="color: white" class="show">px</span>
+                </span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>
+                    <span title="后缀" class="subtitle">Suffix：</span>
+                    <input id="suffix-font" title="后缀文字大小" value="50" min="30" max="100" type="range" >
+                    <span class="show" id="suffix-show">50</span><span style="color: white" class="show">px</span>
+                </span>
+            </div>
+            <div class="item">
+                <span title="颜色" class="title">Color：</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>
+                    <span title="前缀" class="subtitle">Prefix：</span>
+                    <input class="color" title="前缀文字颜色" id="prefix-font-color" onchange="changeFontColor(1);" type="color"/>
+                </span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>
+                    <span title="后缀" class="subtitle">Prefix：</span>
+                    <input class="color" value="#ffffff" title="后缀文字颜色" id="suffix-font-color" onchange="changeFontColor(2);" type="color"/>
+                </span>
+            </div>
+            <div class="item">
+                <span title="样式" class="title">Style：</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>
+                    <span title="前缀" class="subtitle">Prefix：</span>
+                    <input title="斜体" class="button i" onclick="changeFontStyle(this,1,'i');" type="button" value="Italic"/>
+                    <input title="下划线" class="button u" onclick="changeFontStyle(this,1,'u');" type="button" value="Underline"/>
+                    <input title="删除线" class="button d" onclick="changeFontStyle(this,1,'d');" type="button" value="Line-through"/>
+                </span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>
+                    <span title="后缀" class="subtitle">Suffix：</span>
+                    <input title="斜体" class="button i" onclick="changeFontStyle(this,2,'i');" type="button" value="Italic"/>
+                    <input title="下划线" class="button u" onclick="changeFontStyle(this,2,'u');" type="button" value="Underline"/>
+                    <input title="删除线" class="button d" onclick="changeFontStyle(this,2,'d');" type="button" value="Line-through"/>
+                </span>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend title="背景">Background</legend>
+            <div class="item">
+                <span title="形状" class="title">Shape：</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>
+                    <span title="前缀" class="subtitle">Prefix：</span>
+                    <label title="方形" class="radio">
+                        <input type="radio" onclick="changeBackgroundShape(this,1,'s')" name="shape_prefix" class="a-radio" value="square" checked>
+                        <span class="b-radio"></span> Square
+                    </label>
+                    <label title="圆形" class="radio">
+                        <input type="radio" onclick="changeBackgroundShape(this,1,'c')" name="shape_prefix"  class="a-radio" value="circle">
+                        <span class="c-radio"></span>Circle
+                    </label>
+                    <label title="透明" class="radio">
+                        <input type="radio" onclick="changeBackgroundShape(this,1,'n')" name="shape_prefix"  class="a-radio" value="circle">
+                        <span class="d-radio"></span>Transparent
+                    </label>
+                </span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>
+                    <span title="后缀" class="subtitle">Suffix：</span>
+                    <label title="方形" class="radio">
+                        <input type="radio" onclick="changeBackgroundShape(this,2,'s')" name="shape_suffix" class="a-radio" value="square" checked>
+                        <span class="b-radio"></span> Square
+                    </label>
+                    <label title="圆形" class="radio">
+                        <input type="radio" onclick="changeBackgroundShape(this,2,'c')" name="shape_suffix"  class="a-radio" value="circle">
+                        <span class="c-radio"></span>Circle
+                    </label>
+                    <label title="透明" class="radio">
+                        <input type="radio" onclick="changeBackgroundShape(this,2,'n')" name="shape_suffix"  class="a-radio" value="circle">
+                        <span class="d-radio"></span>Transparent
+                    </label>
+                </span>
+            </div>
+            <div class="item">
+                <span title="颜色" class="title">Color：</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>
+                    <span title="前缀" class="subtitle">Prefix：</span>
+                    <input class="color" value="#ffc42d"  title="前缀背景颜色" id="prefix-bg-color" onchange="changeBgColor(this,1);" type="color"/>
+                </span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>
+                    <span title="后缀" class="subtitle">Suffix：</span>
+                    <input class="color" value="#f00000" title="后缀背景颜色" id="suffix-bg-color" onchange="changeBgColor(this,2);" type="color"/>
+                </span>
+            </div>
+        </fieldset>
+    </div>
+</div>
+<div id="preview" style="display: none">
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/html2canvas.js"></script>
+<script type="text/javascript" src="js/RangeSlider.js"></script>
+<script type="text/javascript" src="js/logodiy.js"></script>
+<script type="text/javascript">
+</script>
+</html>
