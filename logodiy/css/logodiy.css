@@ -250,3 +250,14 @@ label input{
 .radio{
     margin: 10px;
 }
+#github{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 66px;
+    height: 66px;
+}
+#github img{
+    width: 100%;
+    height: 100%;
+}
