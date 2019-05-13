@@ -1,3 +1,5 @@
+# It is recommended to use Google Chrome to access
+
 # [中文文档](https://github.com/sherlonWang/logodiy/blob/master/README_zh.md) | [English Document](https://github.com/sherlonWang/logodiy/blob/master/README.md)
 
 # LogoDiy - A Simple Logo DIY Tool Online.

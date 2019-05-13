@@ -1,3 +1,5 @@
+# 建议使用谷歌浏览器访问
+
 # [中文文档](https://github.com/sherlonWang/logodiy/blob/master/README_zh.md) | [English Document](https://github.com/sherlonWang/logodiy/blob/master/README.md)
 
 # LogoDiy - 一个简单的在线Logo制作工具。
