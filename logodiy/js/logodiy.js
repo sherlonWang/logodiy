@@ -109,7 +109,7 @@ function changeBackgroundShape(btn,index,style){
     // 获取当前字体大小
     var font = Math.round($("#"+clazz+"-font").val());
     // 根据字体大小改变对应的padding大小，避免下划线超出背景范围
-    var padding = font*0.5+"px";
+    var padding = font*0.4+"px";
     var element = $("."+clazz);
     switch (style){
         case 's':// 方形
