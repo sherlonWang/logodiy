@@ -18,20 +18,32 @@ body{
 #capture_v{
     display: none;
 }
+.prefix_decoration,.suffix_decoration{
+    position: relative;
+    text-decoration: none;
+    /*border-bottom: 2px solid;*/
+    padding-bottom: -3px;
+    background-size: 100% 100%;
+}
+.prefix_decoration{
+    color: black;
+}
+.suffix_decoration{
+    color: white;
+}
 .prefix,.suffix{
     font-weight: bold;
     font-family: Helvetica;
     font-size: 50px;
+    padding: 8px;
 }
 .prefix{
     color: #08131c;
-    padding: 5px;
     background: #ffc42d;  /* fallback for old browsers */
     border-radius: 10px;
 }
 .suffix{
     color: white;
-    padding: 5px;
     background-color: red;
     border-radius: 10px;
 }

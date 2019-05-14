@@ -5,12 +5,21 @@ $(function(){
     var change_suffix = function($input) {
         /*内容可自行定义*/
         var suffix_font = Math.round($("#suffix-font").val());
+        // 如果背景是圆形的，需要动态改变padding
+        if ($(".suffix").css("border-radius") == "50%") {
+            var padding = suffix_font*0.4+"px";
+            $(".suffix").css("padding",padding);
+        }
         $(".suffix").css('font-size',suffix_font+'px');
         $("#suffix-show").html(suffix_font);
     };
     var change_prefix = function($input) {
         /*内容可自行定义*/
         var prefix_font = Math.round($("#prefix-font").val());
+        if ($(".prefix").css("border-radius") == "50%") {
+            var padding = prefix_font*0.4+"px";
+            $(".prefix").css("padding",padding);
+        }
         $(".prefix").css('font-size',prefix_font+'px');
         $("#prefix-show").html(prefix_font);
     };
@@ -74,7 +83,7 @@ function changeFontColor(index){
         clazz = 'suffix';
     }
     var color = $("#"+clazz+"-font-color").val();
-    $("."+clazz).css('color',color);
+    $("."+clazz+"_decoration").css('color',color);
 }
 function changeBgColor(btn,index){
     var clazz = '';
@@ -97,15 +106,19 @@ function changeBackgroundShape(btn,index,style){
     }else{// 后缀
         clazz = 'suffix';
     }
+    // 获取当前字体大小
+    var font = Math.round($("#"+clazz+"-font").val());
+    // 根据字体大小改变对应的padding大小，避免下划线超出背景范围
+    var padding = font*0.5+"px";
     var element = $("."+clazz);
     switch (style){
         case 's':// 方形
-            element.css('padding','5px').css('border-radius','10px');
+            element.css('padding','8px').css('border-radius','10px');
             var color = $("#"+clazz+"-bg-color").val();
             $("."+clazz).css('background-color',color);
             break;
         case 'c':// 圆形
-            element.css('padding','18px').css('border-radius','50%');
+            element.css('padding',padding).css('border-radius','50%');
             var color = $("#"+clazz+"-bg-color").val();
             $("."+clazz).css('background-color',color);
             break;
@@ -125,9 +138,19 @@ function changeFontStyle(btn,index,style){
     var css = '';
     var css_value = '';
     if (index == 1) {// 前缀
-        clazz = '.prefix';
+        clazz = '.prefix_decoration';
     }else{// 后缀
-        clazz = '.suffix';
+        clazz = '.suffix_decoration';
+    }
+    if (style == 'u') {
+        if (!$(btn).attr('flag')) {
+            $(btn).attr('flag','true').css('background-color','#3095ff');
+            $(clazz).attr('flag','').css("border-bottom","2px solid");
+        }else{
+            $(btn).attr('flag','').css('background-color','#949494');
+            $(clazz).attr('flag','').css("border-bottom","");
+        }
+        return;
     }
     switch (style){
         case 'i':
@@ -135,18 +158,19 @@ function changeFontStyle(btn,index,style){
             css_value = 'italic';
             break;
         case 'u':
-            css = 'text-decoration';
-            css_value = 'underline';
-            if (!$(btn).attr('flag')) {
-                $(btn).siblings("input[class='button d']").attr('flag','').css('background-color','#949494');
-            }
+            //css = 'text-decoration';
+            //css_value = 'underline';
+            //if (!$(btn).attr('flag')) {
+            //    $(btn).siblings("input[class='button d']").attr('flag','').css('background-color','#949494');
+            //}
+            //$(clazz).attr('flag','').css("border-bottom","2px solid");
             break;
         case 'd':
             css = 'text-decoration';
             css_value = 'line-through';
-            if (!$(btn).attr('flag')) {
-                $(btn).siblings("input[class='button u']").attr('flag','').css('background-color','#949494');
-            }
+            //if (!$(btn).attr('flag')) {
+            //    $(btn).siblings("input[class='button u']").attr('flag','').css('background-color','#949494');
+            //}
             break;
         default :
             css = 'font-style';
