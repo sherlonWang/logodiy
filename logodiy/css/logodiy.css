@@ -12,8 +12,9 @@ body{
     /*border: 1px solid red;*/
     background-color: rgba(0, 0, 0, 0);
     width:auto;
+    height: auto;
     display:inline-block;
-    padding: 20px;
+    padding: 2.5%;
 }
 #capture_v{
     display: none;

@@ -23,8 +23,8 @@ $(function(){
         $(".prefix").css('font-size',prefix_font+'px');
         $("#prefix-show").html(prefix_font);
     };
-    $('#suffix-font').RangeSlider({ min: 30,   max: 100,  step: 0.1,  callback: change_suffix});
-    $('#prefix-font').RangeSlider({ min: 30,   max: 100,  step: 0.1,  callback: change_prefix});
+    $('#suffix-font').RangeSlider({ min: 30,   max: 80,  step: 0.1,  callback: change_suffix});
+    $('#prefix-font').RangeSlider({ min: 30,   max: 80,  step: 0.1,  callback: change_prefix});
 
 });
 /*下载logo为图片*/
