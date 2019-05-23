@@ -193,18 +193,18 @@ function changeAlign(btn){
     var capture_v = $("#capture_v");
     var align = $("#align").val();
     if (align == 'h') {
-        var prefix_value = capture_h.find("span[class='prefix']").html();
-        capture_v.find("span[class='prefix']").html(prefix_value);
-        var suffix_value = capture_h.find("span[class='suffix']").html();
-        capture_v.find("span[class='suffix']").html(suffix_value);
+        var prefix_value = capture_h.find("span[class='prefix_decoration']").html();
+        capture_v.find("span[class='prefix_decoration']").html(prefix_value);
+        var suffix_value = capture_h.find("span[class='suffix_decoration']").html();
+        capture_v.find("span[class='suffix_decoration']").html(suffix_value);
         capture_h.css('display','none');
         capture_v.css('display','inline-block');
         $("#align").attr('value','v');
     }else{
-        var suffix_value = capture_v.find("span[class='suffix']").html();
-        capture_h.find("span[class='suffix']").html(suffix_value);
-        var prefix_value = capture_v.find("span[class='prefix']").html();
-        capture_h.find("span[class='prefix']").html(prefix_value);
+        var suffix_value = capture_v.find("span[class='suffix_decoration']").html();
+        capture_h.find("span[class='suffix_decoration']").html(suffix_value);
+        var prefix_value = capture_v.find("span[class='prefix_decoration']").html();
+        capture_h.find("span[class='prefix_decoration']").html(prefix_value);
         capture_v.css('display','none');
         capture_h.css('display','inline-block');
         $("#align").attr('value','h');
