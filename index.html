@@ -20,6 +20,18 @@
             <img src="images/github.png">
         </a>
     </div>
+    <div id="logo">
+        <a id="logoa" title="Hello" href="https://logodiy.imxiaolong.com" target="_blank">
+            <img src="images/logo.png">
+        </a>
+        <p>
+            <a style="text-decoration: none" href="https://logodiy.imxiaolong.com" target="_blank">
+                在线logo制作
+            </a>
+
+        </p>
+
+    </div>
     <div id="edit">
         <div title="修改我" id="capture_h">
             <span class="prefix"><span contenteditable="true" data-placeholder="Make" data-focused-advice="typing" class="prefix_decoration">Edit</span></span>
@@ -33,10 +45,10 @@
     <div id="config">
         <!--<input id="" class="button" onclick="fn1();" type="button" value="渐变"/>-->
         <!-- 下载 -->
-        <input style="width: 200px;height: 50px" title="下载" id="download" class="button" onclick="download();" type="button" value="↓ Download"/>
+        <input style="width: 200px;height: 50px" title="download" id="download" class="button" onclick="download();" type="button" value="↓ 下载"/>
         <br><br>
         <fieldset>
-            <legend title="布局">Layout</legend>
+            <legend title="Layout">布局</legend>
             <div title="Click me" class="switch-container">
                 <input onclick="changeAlign(this);" type="checkbox" id="user-switch">
                 <label for="user-switch"></label>
@@ -44,100 +56,100 @@
             <input id="align" class="button" type="button" value="h"/>
         </fieldset>
         <fieldset>
-            <legend title="文字">Text</legend>
+            <legend title="Text">文字</legend>
             <div class="item">
-                <span title="大小" class="title">Font：</span>
+                <span title="Font Size" class="title">文字大小：</span>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span>
-                    <span title="前缀" class="subtitle">Prefix：</span>
+                    <span title="Prefix" class="subtitle">前缀：</span>
                     <input id="prefix-font" title="前缀文字大小" value="50" min="30" max="100" type="range" >
                     <span class="show" id="prefix-show">50</span><span style="color: white" class="show">px</span>
                 </span>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span>
-                    <span title="后缀" class="subtitle">Suffix：</span>
+                    <span title="Suffix" class="subtitle">后缀：</span>
                     <input id="suffix-font" title="后缀文字大小" value="50" min="30" max="100" type="range" >
                     <span class="show" id="suffix-show">50</span><span style="color: white" class="show">px</span>
                 </span>
             </div>
             <div class="item">
-                <span title="颜色" class="title">Color：</span>
+                <span title="Font Color" class="title">文字颜色：</span>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span>
-                    <span title="前缀" class="subtitle">Prefix：</span>
+                    <span title="Prefix" class="subtitle">前缀：</span>
                     <input class="color" title="前缀文字颜色" id="prefix-font-color" onchange="changeFontColor(1);" type="color"/>
                 </span>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span>
-                    <span title="后缀" class="subtitle">Suffix：</span>
+                    <span title="Suffix" class="subtitle">后缀：</span>
                     <input class="color" value="#ffffff" title="后缀文字颜色" id="suffix-font-color" onchange="changeFontColor(2);" type="color"/>
                 </span>
             </div>
             <div class="item">
-                <span title="样式" class="title">Style：</span>
+                <span title="Style" class="title">文字样式：</span>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span>
-                    <span title="前缀" class="subtitle">Prefix：</span>
-                    <input title="斜体" class="button i" onclick="changeFontStyle(this,1,'i');" type="button" value="Italic"/>
-                    <input title="下划线" class="button u" onclick="changeFontStyle(this,1,'u');" type="button" value="Underline"/>
-                    <input title="删除线" class="button d" onclick="changeFontStyle(this,1,'d');" type="button" value="Line-through"/>
+                    <span title="Prefix" class="subtitle">前缀：</span>
+                    <input title="Italic" class="button i" onclick="changeFontStyle(this,1,'i');" type="button" value="斜体"/>
+                    <input title="Underline" class="button u" onclick="changeFontStyle(this,1,'u');" type="button" value="下划线"/>
+                    <input title="Line-through" class="button d" onclick="changeFontStyle(this,1,'d');" type="button" value="删除线"/>
                 </span>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span>
-                    <span title="后缀" class="subtitle">Suffix：</span>
-                    <input title="斜体" class="button i" onclick="changeFontStyle(this,2,'i');" type="button" value="Italic"/>
-                    <input title="下划线" class="button u" onclick="changeFontStyle(this,2,'u');" type="button" value="Underline"/>
-                    <input title="删除线" class="button d" onclick="changeFontStyle(this,2,'d');" type="button" value="Line-through"/>
+                    <span title="Suffix" class="subtitle">后缀：</span>
+                    <input title="Italic" class="button i" onclick="changeFontStyle(this,2,'i');" type="button" value="斜体"/>
+                    <input title="Underline" class="button u" onclick="changeFontStyle(this,2,'u');" type="button" value="下划线"/>
+                    <input title="Line-through" class="button d" onclick="changeFontStyle(this,2,'d');" type="button" value="删除线"/>
                 </span>
             </div>
         </fieldset>
         <fieldset>
-            <legend title="背景">Background</legend>
+            <legend title="Background">背景</legend>
             <div class="item">
-                <span title="形状" class="title">Shape：</span>
+                <span title="Background Shape" class="title">背景形状：</span>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span>
-                    <span title="前缀" class="subtitle">Prefix：</span>
-                    <label title="方形" class="radio">
+                    <span title="Prefix" class="subtitle">前缀：</span>
+                    <label title="Square" class="radio">
                         <input type="radio" onclick="changeBackgroundShape(this,1,'s')" name="shape_prefix" class="a-radio" value="square" checked>
-                        <span class="b-radio"></span> Square
+                        <span class="b-radio"></span> 方形
                     </label>
-                    <label title="圆形" class="radio">
+                    <label title="Circle" class="radio">
                         <input type="radio" onclick="changeBackgroundShape(this,1,'c')" name="shape_prefix"  class="a-radio" value="circle">
-                        <span class="c-radio"></span>Circle
+                        <span class="c-radio"></span> 圆形
                     </label>
-                    <label title="透明" class="radio">
+                    <label title="Transparent" class="radio">
                         <input type="radio" onclick="changeBackgroundShape(this,1,'n')" name="shape_prefix"  class="a-radio" value="circle">
-                        <span class="d-radio"></span>Transparent
+                        <span class="d-radio"></span> 透明
                     </label>
                 </span>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span>
-                    <span title="后缀" class="subtitle">Suffix：</span>
-                    <label title="方形" class="radio">
+                    <span title="Suffix" class="subtitle">后缀：</span>
+                    <label title="Square" class="radio">
                         <input type="radio" onclick="changeBackgroundShape(this,2,'s')" name="shape_suffix" class="a-radio" value="square" checked>
-                        <span class="b-radio"></span> Square
+                        <span class="b-radio"></span> 方形
                     </label>
-                    <label title="圆形" class="radio">
+                    <label title="Circle" class="radio">
                         <input type="radio" onclick="changeBackgroundShape(this,2,'c')" name="shape_suffix"  class="a-radio" value="circle">
-                        <span class="c-radio"></span>Circle
+                        <span class="c-radio"></span> 圆形
                     </label>
-                    <label title="透明" class="radio">
+                    <label title="Transparent" class="radio">
                         <input type="radio" onclick="changeBackgroundShape(this,2,'n')" name="shape_suffix"  class="a-radio" value="circle">
-                        <span class="d-radio"></span>Transparent
+                        <span class="d-radio"></span> 透明
                     </label>
                 </span>
             </div>
             <div class="item">
-                <span title="颜色" class="title">Color：</span>
+                <span title="Background Color" class="title">背景颜色：</span>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span>
-                    <span title="前缀" class="subtitle">Prefix：</span>
+                    <span title="Prefix" class="subtitle">前缀：</span>
                     <input class="color" value="#ffc42d"  title="前缀背景颜色" id="prefix-bg-color" onchange="changeBgColor(this,1);" type="color"/>
                 </span>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span>
-                    <span title="后缀" class="subtitle">Suffix：</span>
+                    <span title="Suffix" class="subtitle">后缀：</span>
                     <input class="color" value="#f00000" title="后缀背景颜色" id="suffix-bg-color" onchange="changeBgColor(this,2);" type="color"/>
                 </span>
             </div>
